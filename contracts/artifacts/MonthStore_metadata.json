@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_monthName",
+						"type": "string"
+					}
+				],
+				"name": "addMonth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
+					}
+				],
+				"name": "getMonth",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/2_monthStore.sol": "MonthStore"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2_monthStore.sol": {
+			"keccak256": "0x5fbf3df74c91232530d8563f6fb8e98e185ecb3a38e8f8d6a6662ef78395454a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2184b32674cbf6d7e75552f909542304f2fd2253ddf29b8310a3b019d1b4aefb",
+				"dweb:/ipfs/QmZhswQ2nSkyGMUF8Lg877jagoWTEUGoJxxfkn5ZDkryBP"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763",
+				"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N"
+			]
+		}
+	},
+	"version": 1
+}
