@@ -7,31 +7,17 @@ import "hardhat/console.sol";
 contract  ToDOList {
 
     struct toDo{
-        uint id;
-        string name;
+        string item;
+        bool status;
     }
 
-    mapping(address => toDo) public toDoStruct;
+    mapping(address => toDo[]) public toDoStruct;
 
-    uint count = 0;
-    address[] public toDoArr;
-
-    function addTodoItems(string memory _name) public{
-        // toDoArr.push("001", "Test for ToDo", block.timestamp, true );
-        toDoStruct[msg.sender].id = count;
-        toDoStruct[msg.sender].name = _name;
-        toDoArr.push(msg.sender);
-        count += 1;
+    function createTodo(string memory _item) public{
+        toDoStruct[msg.sender].push(toDo({item:_item, status: false}));
     }
 
-    function getName() public{
-        // uint len = toDoArr.length;
-        // string[] memory arr;
-        // for(uint i=0; i<len; i++){
-        //     arr.push(toDoArr[i].name);
-        // }
-        address me;
-        console.log("test1", msg.sender);
-        console.log("test2",  me);
+    function getTodoList() external view returns(toDo[] memory){
+      return toDoStruct[msg.sender];
     }
 }

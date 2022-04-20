@@ -9,36 +9,35 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_name",
+						"name": "_item",
 						"type": "string"
 					}
 				],
-				"name": "addTodoItems",
+				"name": "createTodo",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getName",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "toDoArr",
+				"name": "getTodoList",
 				"outputs": [
 					{
-						"internalType": "address",
+						"components": [
+							{
+								"internalType": "string",
+								"name": "item",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "status",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ToDOList.toDo[]",
 						"name": "",
-						"type": "address"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -50,19 +49,24 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"name": "toDoStruct",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "item",
+						"type": "string"
 					},
 					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -97,11 +101,11 @@
 	},
 	"sources": {
 		"contracts/1_todo_list.sol": {
-			"keccak256": "0x0c380d7bfacfad5f7b8a3df3b6bdeeaae6d6308dcd8ea7301ee272ae1a3b4d17",
+			"keccak256": "0x1ffad4097ae4ab575a2065bd8c1ef1eb4afef32a2f21840df0635418fba861bb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1a9cf5912d22dd52c211576844a34ed3770b123fe6ba1a831c2f813c40678886",
-				"dweb:/ipfs/Qmc1ddpwD9qnd3xxNMRYXFAc2Lnts8kzFxQuHbLFRWjkkS"
+				"bzz-raw://bf534d4840b101eb3a51b3eb736742fe283d280bcf0eee732e3f330c990ea434",
+				"dweb:/ipfs/QmbhQu9L6nisQvufv3VKZ1sE3JPpNWTZg9NL2fE6YhTj4u"
 			]
 		},
 		"hardhat/console.sol": {

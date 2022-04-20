@@ -6,7 +6,7 @@ import "hardhat/console.sol";
 
 contract MonthStore {
     mapping(uint => string) months;
-    uint count = 0;
+    uint count = 0; 
     function addMonth(string memory _monthName) public {
         count = count + 1;
         months[count] = _monthName;
